@@ -19,7 +19,7 @@ st = [
     Student("Voxid12", "Qobilov", 30, Gender.MAN),
 ]
 
-
+#fasdfasdf
 
 def binary_search(val, st):
     l=0
