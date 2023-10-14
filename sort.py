@@ -21,18 +21,26 @@ st = [
 ]
 
 
-a = [3, 2, 6, 1, 94, 23, 13]
-res=[]
-for s in range(len(a)):
-    m=a[0]
-    sel_ind=0
-    for i in range(0, len(a)):
-        if m<a[i]:
-            m=a[i]
-            sel_ind=i
-    res.append(a.pop(sel_ind))
+def fact(val):
+    if val>1:
+        return fact(val-1)*val
+    else:
+        return 1
+print(fact(5))
 
-print(res)
+#
+# a = [3, 2, 6, 1, 94, 23, 13]
+# res=[]
+# for s in range(len(a)):
+#     m=a[0]
+#     sel_ind=0
+#     for i in range(0, len(a)):
+#         if m<a[i]:
+#             m=a[i]
+#             sel_ind=i
+#     res.append(a.pop(sel_ind))
+#
+# print(res)
 
 
 # def select_sort(a):
