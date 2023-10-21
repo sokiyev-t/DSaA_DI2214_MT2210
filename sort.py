@@ -21,12 +21,6 @@ st = [
 ]
 
 
-def fact(val):
-    if val>1:
-        return fact(val-1)*val
-    else:
-        return 1
-print(fact(5))
 
 #
 # a = [3, 2, 6, 1, 94, 23, 13]
