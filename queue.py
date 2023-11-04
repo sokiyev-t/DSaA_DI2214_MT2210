@@ -1,7 +1,14 @@
 class Node:
     def __init__(self, val):
         self.next=None
+        self.prev=None
         self.val=val
+
+    def get_prev(self):
+        return self.prev
+
+    def set_prev(self, prev):
+        self.prev=prev
 
     def get_next(self):
         return self.next
@@ -24,6 +31,13 @@ class Queue:
         new_head=Node(val)
         new_head.set_next(self.head)
         self.head=new_head
+
+
+
+
+
+        if self.tail==None:
+            self.tail=self.head
 
     def pop(self):
         val=self.head.get_val()
