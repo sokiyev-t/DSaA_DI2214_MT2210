@@ -28,16 +28,21 @@ class Queue:
         self.tail=None
 
     def push(self, val):
-        new_head=Node(val)
-        new_head.set_next(self.head)
-        self.head=new_head
+        new_tail=Node(val)
+        new_tail.set_prev(self.tail)
+
+        if self.tail:
+            self.tail.set_next(new_tail)
+        self.tail = new_tail
+
+        if not self.head:
+            self.head=new_tail
 
 
 
 
 
-        if self.tail==None:
-            self.tail=self.head
+
 
     def pop(self):
         val=self.head.get_val()
@@ -47,12 +52,12 @@ class Queue:
     def is_empty(self):
         return self.head==None
 
-# s=Stack()
-# s.push(5)
-# s.push(2)
-# s.push(16)
-#
-# while not s.is_empty():
-#     v = s.pop()
-#     print(v)
+s=Queue()
+s.push(5)
+s.push(2)
+s.push(16)
+
+while not s.is_empty():
+    v = s.pop()
+    print(v)
 
